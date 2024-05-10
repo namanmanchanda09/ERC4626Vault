@@ -50,7 +50,7 @@ contract DiamondHands is ERC4626 {
         // Various checks
         require(_vWETH > 0, "vWETH amount is less than zero");
         require(depositors[msg.sender] > 0, "Not a depositor");
-        require(depositors[msg.sender] >= _vWETH, "Depositor doesn't have enough vWETH");
+        require(depositors[msg.sender] >= _vWETH, "Depositor doesnt have enough vWETH");
 
         WethDeposit[] memory WethDepositArray = WethDeposits[msg.sender];
         uint256 numberOfDeposits = WethDepositArray.length;
